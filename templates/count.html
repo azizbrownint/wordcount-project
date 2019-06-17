@@ -1,0 +1,18 @@
+<h1>You have {{ count }} words in your submission.</h1>
+
+<a href ="{% url 'home' %}"> Start Again </a>
+
+<h1>This is your text:</h1>
+  {{ fulltext }}
+
+<h1>Your Word Count is:</h1>
+
+  {% for word, counttotal in worddictionary %}
+
+  {{ word }}
+  <br />
+
+  {{ counttotal }}
+  <br />
+
+  {% endfor %}
